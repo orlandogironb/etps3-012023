@@ -11,15 +11,45 @@ class _PrincipalState extends State<Principal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      // appBar: AppBar(),
+      // body: Column(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(height: 50, width: 50, color: Colors.indigoAccent),
-          Container(
-              height: 50, width: 50, color: Color.fromARGB(255, 117, 238, 12)),
-          Container(
-              height: 50, width: 50, color: Color.fromARGB(255, 238, 131, 9)),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(height: 50, width: 50, color: Colors.deepPurple[400]),
+              Container(height: 50, width: 50, color: Colors.deepPurple[200]),
+              Container(height: 50, width: 50, color: Colors.deepPurple[100]),
+              Container(height: 50, width: 50, color: Colors.deepPurple[50]),
+              Container(height: 50, width: 50, color: Colors.deepPurple[25]),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(height: 50, width: 50, color: Colors.deepOrange[400]),
+              Container(height: 50, width: 50, color: Colors.deepOrange[200]),
+              Container(height: 50, width: 50, color: Colors.indigoAccent[400]),
+              Container(height: 50, width: 50, color: Colors.indigoAccent[200]),
+              Container(height: 50, width: 50, color: Colors.indigoAccent[100]),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(height: 50, width: 50, color: Colors.deepOrange[400]),
+              Container(height: 50, width: 50, color: Colors.deepOrange[200]),
+              Container(height: 50, width: 50, color: Colors.indigoAccent[400]),
+              Container(height: 50, width: 50, color: Colors.indigoAccent[200]),
+              Container(height: 50, width: 50, color: Colors.indigoAccent[100]),
+            ],
+          ),
         ],
       ),
     );
