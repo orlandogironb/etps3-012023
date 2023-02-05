@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_builder/figuras/circulos.dart';
 import 'package:flutter_list_builder/figuras/square.dart';
 
 class Principal extends StatefulWidget {
@@ -11,9 +12,42 @@ class Principal extends StatefulWidget {
 class _PrincipalState extends State<Principal> {
   @override
   Widget build(BuildContext context) {
-    final List _post = ['pantalla1', 'pantalla2', 'pantalla3', 'pantalla4'];
+    final List _post = ['pantalla 1', 'pantalla 2', 'pantalla 3', 'pantalla 4'];
+    final List _historias = [
+      'historia 1',
+      'historia 2',
+      'historia 3',
+      'historia 4',
+      'historia 5'
+    ];
     return Scaffold(
-      body: ListView(
+      body: Column(
+        children: [
+          //instagram historias
+          Container(
+            height: 150,
+            child: ListView.builder(
+                itemCount: _historias.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return MisCirculos();
+                }),
+          ),
+
+          //instagram post
+
+          Expanded(
+            // height: 300,
+            child: ListView.builder(
+                itemCount: _post.length,
+                itemBuilder: (context, index) {
+                  return Mifigura(child: _post[index]);
+                }),
+          ),
+        ],
+      ),
+
+      /* se conviete  en builder ListView(
         //padre
         //physics: NeverScrollableScrollPhysics(),
         children: [
@@ -53,7 +87,7 @@ class _PrincipalState extends State<Principal> {
           Mifigura(),
           Mifigura(),
         ],
-      ),
+      ), fin de list view*/
     );
   }
 }
