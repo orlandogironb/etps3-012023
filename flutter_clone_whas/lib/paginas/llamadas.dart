@@ -104,6 +104,14 @@ class _LlamadasState extends State<Llamadas> {
   Widget getBody() {
     return ListView(
       children: [
+        Text(
+          "Estado",
+          style: TextStyle(
+              fontSize: 23, color: white, fontWeight: FontWeight.bold),
+        ),
+        SizedBox(
+          height: 15,
+        ),
         Container(
           height: 38,
           decoration: BoxDecoration(
