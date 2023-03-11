@@ -5,7 +5,12 @@ const List profile = [
   {
     "name": "Juan Perez",
     "img":
-        "https://images.pexels.com/photos/2566315/pexels-photo-2566315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        "https://images.pexels.com/photos/1462980/pexels-photo-1462980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "name": "Maria Perez",
+    "img":
+        "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ];
 

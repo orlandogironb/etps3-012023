@@ -18,7 +18,7 @@ class _ChatPaginaState extends State<ChatPagina> {
     );
   }
 
-  Widget getAppBar() {
+  PreferredSizeWidget getAppBar() {
     return AppBar(
       backgroundColor: bgColor,
       leading: IconButton(
