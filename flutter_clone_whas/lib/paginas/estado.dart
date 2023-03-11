@@ -144,52 +144,52 @@ class _EstadoState extends State<Estado> {
                                   fontWeight: FontWeight.w600,
                                   color: white.withOpacity(0.5)),
                             ),
-                            SizedBox(
-                              height: 3,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  width: 38,
-                                  height: 38,
-                                  decoration: BoxDecoration(
-                                      color: white.withOpacity(0.1),
-                                      shape: BoxShape.circle),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.camera_alt,
-                                      color: primary,
-                                      size: 20,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  width: 38,
-                                  height: 38,
-                                  decoration: BoxDecoration(
-                                      color: white.withOpacity(0.1),
-                                      shape: BoxShape.circle),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.edit,
-                                      color: primary,
-                                      size: 20,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
                           ],
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 38,
+                              height: 38,
+                              decoration: BoxDecoration(
+                                  color: white.withOpacity(0.1),
+                                  shape: BoxShape.circle),
+                              child: Center(
+                                child: Icon(
+                                  Icons.camera_alt,
+                                  color: primary,
+                                  size: 20,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              width: 38,
+                              height: 38,
+                              decoration: BoxDecoration(
+                                  color: white.withOpacity(0.1),
+                                  shape: BoxShape.circle),
+                              child: Center(
+                                child: Icon(
+                                  Icons.edit,
+                                  color: primary,
+                                  size: 20,
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
                       ],
                     )
                   ],
