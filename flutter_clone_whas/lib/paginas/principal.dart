@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clone_whas/paginas/chat.dart';
 import 'package:flutter_clone_whas/paginas/estado.dart';
+import 'package:flutter_clone_whas/paginas/llamadas.dart';
 import 'package:flutter_clone_whas/temas/colores.dart';
 
 import 'package:line_icons/line_icons.dart';
@@ -28,7 +29,7 @@ class _PrincipalState extends State<Principal> {
       index: paginaIndex,
       children: [
         Estado(),
-        ChatPagina(),
+        Llamadas(),
         ChatPagina(),
         ChatPagina(),
         ChatPagina(),

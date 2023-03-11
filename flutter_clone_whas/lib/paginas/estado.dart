@@ -147,9 +147,9 @@ class _EstadoState extends State<Estado> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
-                        Row(
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -195,6 +195,23 @@ class _EstadoState extends State<Estado> {
                   ],
                 )
               ],
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Container(
+          height: 40,
+          width: double.infinity,
+          decoration: BoxDecoration(color: textfieldColor),
+          child: Center(
+            child: Text(
+              "No existen actualizaciones por el momento",
+              style: TextStyle(
+                  fontSize: 14,
+                  color: white.withOpacity(0.5),
+                  fontWeight: FontWeight.w400),
             ),
           ),
         ),
