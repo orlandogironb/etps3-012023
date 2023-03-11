@@ -27,8 +27,12 @@ class _PrincipalState extends State<Principal> {
     return IndexedStack(
       index: paginaIndex,
       children: [
+        Estado(),
         ChatPagina(),
-      Estado()],
+        ChatPagina(),
+        ChatPagina(),
+        ChatPagina(),
+      ],
     );
   }
 

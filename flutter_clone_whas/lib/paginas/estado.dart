@@ -69,134 +69,128 @@ class _EstadoState extends State<Estado> {
                           color: white.withOpacity(0.3), fontSize: 17)),
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
-              Container(
-                height: 80,
-                width: double.infinity,
-                decoration: BoxDecoration(color: textfieldColor),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      width: 70,
-                                      height: 70,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          image: DecorationImage(
-                                              image: NetworkImage(
-                                                  profile[1]['img']),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                    Positioned(
-                                      right: 5,
-                                      bottom: 0,
-                                      child: Container(
-                                        width: 20,
-                                        height: 20,
-                                        decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: primary),
-                                        child: Center(
-                                          child: Icon(
-                                            Icons.add,
-                                            color: white,
-                                            size: 18,
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    profile[1]['name'],
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600,
-                        color: white),
-                  ),
-                  SizedBox(
-                    height: 3,
-                  ),
-                  Text(
-                    "Agregar estado",
-                    style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: white.withOpacity(0.5)),
-                  ),
-                  SizedBox(
-                    height: 3,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 38,
-                        height: 38,
-                        decoration: BoxDecoration(
-                            color: white.withOpacity(0.1),
-                            shape: BoxShape.circle),
-                        child: Center(
-                          child: Icon(
-                            Icons.camera_alt,
-                            color: primary,
-                            size: 20,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        width: 38,
-                        height: 38,
-                        decoration: BoxDecoration(
-                            color: white.withOpacity(0.1),
-                            shape: BoxShape.circle),
-                        child: Center(
-                          child: Icon(
-                            Icons.edit,
-                            color: primary,
-                            size: 20,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
             ],
           ),
-        )
+        ),
+        SizedBox(
+          height: 50,
+        ),
+        Container(
+          height: 80,
+          width: double.infinity,
+          decoration: BoxDecoration(color: textfieldColor),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          child: Stack(
+                            children: [
+                              Container(
+                                width: 70,
+                                height: 70,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                        image: NetworkImage(profile[1]['img']),
+                                        fit: BoxFit.cover)),
+                              ),
+                              Positioned(
+                                right: 5,
+                                bottom: 0,
+                                child: Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle, color: primary),
+                                  child: Center(
+                                    child: Icon(
+                                      Icons.add,
+                                      color: white,
+                                      size: 18,
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              profile[1]['name'],
+              style: TextStyle(
+                  fontSize: 17, fontWeight: FontWeight.w600, color: white),
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            Text(
+              "Agregar estado",
+              style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: white.withOpacity(0.5)),
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 38,
+                  height: 38,
+                  decoration: BoxDecoration(
+                      color: white.withOpacity(0.1), shape: BoxShape.circle),
+                  child: Center(
+                    child: Icon(
+                      Icons.camera_alt,
+                      color: primary,
+                      size: 20,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Row(
+              children: [
+                Container(
+                  width: 38,
+                  height: 38,
+                  decoration: BoxDecoration(
+                      color: white.withOpacity(0.1), shape: BoxShape.circle),
+                  child: Center(
+                    child: Icon(
+                      Icons.edit,
+                      color: primary,
+                      size: 20,
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
       ],
     );
   }
