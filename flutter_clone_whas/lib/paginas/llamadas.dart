@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clone_whas/json/chat_json.dart';
 import 'package:flutter_clone_whas/temas/colores.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -159,8 +160,7 @@ class _LlamadasState extends State<Llamadas> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 15, right: 15, top: 15),
+                    padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
                         Text(
@@ -169,7 +169,7 @@ class _LlamadasState extends State<Llamadas> {
                         ),
                         Text(
                           "Comparte un enlace para tu llamada de WhatsApp",
-                          style: TextStyle(fontSize: 14, color: white),
+                          style: TextStyle(fontSize: 11, color: white),
                         ),
                       ],
                     ),
@@ -196,7 +196,22 @@ class _LlamadasState extends State<Llamadas> {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Crear una video llamada",
+                      style: TextStyle(fontSize: 14, color: white),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 5, right: 5, left: 5),
+                    child: Divider(color: white.withOpacity(0.3)),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  MenuActivo == 0 ? getLlamadas() : getLlamadasPerdidas()
                 ],
               )
             ],
@@ -204,5 +219,45 @@ class _LlamadasState extends State<Llamadas> {
         )
       ],
     );
+  }
+
+  Widget getLlamadas() {
+    var tamanio = MediaQuery.of(context).size;
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
+      child: Column(
+        children: [
+          Column(
+            children: [
+              Column(
+                children: [
+                  Container(
+                    width: (tamanio.width - 30) * 0.4,
+                    child: Row(children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        width: 45,
+                        height: 45,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                                image: NetworkImage(chat_data[0]['img']),
+                                fit: BoxFit.cover)),
+                      )
+                    ]),
+                  )
+                ],
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget getLlamadasPerdidas() {
+    return Container();
   }
 }
