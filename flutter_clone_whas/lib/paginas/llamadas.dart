@@ -208,9 +208,6 @@ class _LlamadasState extends State<Llamadas> {
                     padding: EdgeInsets.only(top: 5, right: 5, left: 5),
                     child: Divider(color: white.withOpacity(0.3)),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
                   MenuActivo == 0 ? getLlamadas() : getLlamadasPerdidas()
                 ],
               )
@@ -223,20 +220,17 @@ class _LlamadasState extends State<Llamadas> {
 
   Widget getLlamadas() {
     var tamanio = MediaQuery.of(context).size;
-    return Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
-      child: Column(
-        children: [
-          Column(
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
+          child: Column(
             children: [
-              Column(
+              Row(
                 children: [
                   Container(
                     width: (tamanio.width - 30) * 0.4,
                     child: Row(children: [
-                      SizedBox(
-                        height: 20,
-                      ),
                       Container(
                         width: 45,
                         height: 45,
@@ -247,13 +241,19 @@ class _LlamadasState extends State<Llamadas> {
                                 fit: BoxFit.cover)),
                       )
                     ]),
+                  ),
+                  SizedBox(
+                    width: 1,
+                  ),
+                  Container(
+                    width: (tamanio.width - 100) * 0.4,
                   )
                 ],
               )
             ],
-          )
-        ],
-      ),
+          ),
+        ),
+      ],
     );
   }
 
