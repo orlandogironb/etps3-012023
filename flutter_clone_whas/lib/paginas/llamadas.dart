@@ -104,32 +104,104 @@ class _LlamadasState extends State<Llamadas> {
   Widget getBody() {
     return ListView(
       children: [
-        Text(
-          "Estado",
-          style: TextStyle(
-              fontSize: 23, color: white, fontWeight: FontWeight.bold),
-        ),
-        SizedBox(
-          height: 15,
-        ),
-        Container(
-          height: 38,
-          decoration: BoxDecoration(
-            color: textfieldColor,
-            borderRadius: BorderRadius.circular(10),
+        Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 25,
+              ),
+              Text(
+                "Llamadas",
+                style: TextStyle(
+                    fontSize: 23, color: white, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                height: 38,
+                decoration: BoxDecoration(
+                  color: textfieldColor,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextField(
+                  style: TextStyle(color: white),
+                  cursorColor: primary,
+                  decoration: InputDecoration(
+                      prefixIcon:
+                          Icon(LineIcons.search, color: white.withOpacity(0.3)),
+                      border: InputBorder.none,
+                      hintText: "Busqueda",
+                      hintStyle: TextStyle(
+                          color: white.withOpacity(0.3), fontSize: 17)),
+                ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                children: [
+                  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.green),
+                    child: Container(
+                      child: Center(
+                        child: Icon(
+                          LineIcons.link,
+                          color: white,
+                          size: 30,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 15, right: 15, top: 15),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Crear enlace de llamada",
+                          style: TextStyle(fontSize: 14, color: white),
+                        ),
+                        Text(
+                          "Comparte un enlace para tu llamada de WhatsApp",
+                          style: TextStyle(fontSize: 14, color: white),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white.withOpacity(0.1)),
+                    child: Container(
+                      child: Center(
+                        child: Icon(
+                          LineIcons.video,
+                          color: primary,
+                          size: 25,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )
+            ],
           ),
-          child: TextField(
-            style: TextStyle(color: white),
-            cursorColor: primary,
-            decoration: InputDecoration(
-                prefixIcon:
-                    Icon(LineIcons.search, color: white.withOpacity(0.3)),
-                border: InputBorder.none,
-                hintText: "Busqueda",
-                hintStyle:
-                    TextStyle(color: white.withOpacity(0.3), fontSize: 17)),
-          ),
-        ),
+        )
       ],
     );
   }
