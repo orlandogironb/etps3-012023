@@ -181,34 +181,38 @@ class _LlamadasState extends State<Llamadas> {
               ),
               Row(
                 children: [
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white.withOpacity(0.1)),
-                    child: Container(
-                      child: Center(
-                        child: Icon(
-                          LineIcons.video,
-                          color: primary,
-                          size: 25,
+                  Column(
+                    children: [
+                      Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white.withOpacity(0.1)),
+                        child: Container(
+                          child: Center(
+                            child: Icon(
+                              LineIcons.video,
+                              color: primary,
+                              size: 25,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Video llamada",
+                          style: TextStyle(fontSize: 14, color: white),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 5, right: 5, left: 5),
+                        child: Divider(color: white.withOpacity(0.3)),
+                      ),
+                      MenuActivo == 0 ? getLlamadas() : getLlamadasPerdidas()
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Crear una video llamada",
-                      style: TextStyle(fontSize: 14, color: white),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 5, right: 5, left: 5),
-                    child: Divider(color: white.withOpacity(0.3)),
-                  ),
-                  MenuActivo == 0 ? getLlamadas() : getLlamadasPerdidas()
                 ],
               )
             ],
@@ -229,7 +233,7 @@ class _LlamadasState extends State<Llamadas> {
               Row(
                 children: [
                   Container(
-                    width: (tamanio.width - 30) * 0.4,
+                    //  width: (tamanio.width - 30) * 0.4,
                     child: Row(children: [
                       Container(
                         width: 45,
@@ -239,16 +243,75 @@ class _LlamadasState extends State<Llamadas> {
                             image: DecorationImage(
                                 image: NetworkImage(chat_data[0]['img']),
                                 fit: BoxFit.cover)),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        width: (tamanio.width - 100) * 0.4,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              chat_data[0]['name'],
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: white,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(
+                              height: 3,
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.call,
+                                  color: white.withOpacity(0.5),
+                                ),
+                                SizedBox(
+                                  width: 3,
+                                ),
+                                Text(
+                                  "Llamada entrante",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      color: white.withOpacity(0.5),
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       )
                     ]),
                   ),
-                  SizedBox(
-                    width: 1,
-                  ),
                   Container(
-                    width: (tamanio.width - 100) * 0.4,
-                  )
+                    width: 150,
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            chat_data[0]['date'],
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: white.withOpacity(0.5)),
+                          ),
+                          Icon(
+                            Icons.info_outline,
+                            color: primario,
+                          )
+                        ]),
+                  ),
                 ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 55),
+                child: Divider(
+                  color: white.withOpacity(0.3),
+                ),
               )
             ],
           ),

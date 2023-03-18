@@ -19,7 +19,7 @@ const List chat_data = [
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Doctor Lagarto",
-    "text": "Hola Lagartija",
+    "text": "Llamada entrante",
     "date": "24/02/2023"
   },
   {
