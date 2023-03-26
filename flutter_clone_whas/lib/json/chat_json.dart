@@ -19,7 +19,7 @@ const List chat_data = [
     "img":
         "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "name": "Doctor Lagarto",
-    "text": "Llamada entrante",
+    "text": "Hola como estas, fuistes a clases",
     "date": "24/02/2023"
   },
   {
@@ -27,70 +27,80 @@ const List chat_data = [
         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "name": "Pepe Lagarto",
     "text": "Hola Lagartija como estas?",
-    "date": "24/02/2023"
+    "date": "24/02/2023",
+    "ultimaC": "En Linea"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Juan Lagarto",
-    "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "text": "que te dijo",
+    "date": "24/02/2023",
+    "ultimaC": "5 min"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Pedro Lagarto",
-    "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "text": "XD F",
+    "date": "24/02/2023",
+    "ultimaC": "una hora"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Luisa Lagarto",
     "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "date": "24/02/2023",
+    "ultimaC": "En Linea"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Maria Lagarto",
     "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "date": "24/02/2023",
+    "ultimaC": "En Linea"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Ramon Lagarto",
     "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "date": "24/02/2023",
+    "ultimaC": "En Linea"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Mario Lagarto",
     "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "date": "24/02/2023",
+    "ultimaC": "En Linea"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Esperaza Lagarto",
     "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "date": "24/02/2023",
+    "ultimaC": "En Linea"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Tito Lagarto",
     "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "date": "24/02/2023",
+    "ultimaC": "una hora"
   },
   {
     "img":
         "https://images.pexels.com/photos/1557801/pexels-photo-1557801.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "name": "Agustin Lagarto",
     "text": "Llamada entrante",
-    "date": "24/02/2023"
+    "date": "24/02/2023",
+    "ultimaC": "una hora"
   },
 ];
 
