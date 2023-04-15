@@ -140,14 +140,122 @@ List config_secc_tres = [
 const List mensajes = [
   {
     "isMe": true,
-    "message": "Que estas haciendo",
-    "time": "18:42",
-    "isLast": false
+    "message": "Hey friend, How are you doing?",
+    "time": "1:40 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "good to know you are well.",
+    "time": "1:40 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "you can sing.",
+    "time": "1:41 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "okay friend,",
+    "time": "1:41 PM",
+    "isLast": true,
   },
   {
     "isMe": false,
-    "message": "Que estas haciendo",
-    "time": "18:42",
-    "isLast": true
-  }
+    "message": "Good ey friend",
+    "time": "2:42 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": false,
+    "message": "jam sing 2 nak",
+    "time": "2:44 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": false,
+    "message": "good nas",
+    "time": "2:45 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": false,
+    "message": "Hi frienddd.",
+    "time": "2:46 PM",
+    "isLast": true,
+  },
+  {
+    "isMe": true,
+    "message": "yes, hey again Sophal",
+    "time": "1:40 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "Let me try to call you tomorrow.",
+    "time": "1:40 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "Next time pel tenh tam me tov",
+    "time": "1:41 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "Order tam me tov",
+    "time": "1:41 PM",
+    "isLast": true,
+  },
+  {
+    "isMe": false,
+    "message": "Orkun friend",
+    "time": "2:42 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": false,
+    "message": "me banh song fri venh ai",
+    "time": "2:44 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": false,
+    "message": "orkun nas friend",
+    "time": "2:45 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": false,
+    "message": "all the best na!!!",
+    "time": "2:46 PM",
+    "isLast": true,
+  },
+  {
+    "isMe": true,
+    "message": "Wow, niceee",
+    "time": "1:40 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "Yes very good",
+    "time": "1:40 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "No worries, all the best",
+    "time": "1:41 PM",
+    "isLast": false,
+  },
+  {
+    "isMe": true,
+    "message": "talk to you soon.",
+    "time": "1:41 PM",
+    "isLast": true,
+  },
 ];
