@@ -54,7 +54,44 @@ class _AppiRestFlutterState extends State<AppiRestFlutter> {
           ),
           body: FutureBuilder(
             future: _listadogiphy,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                // print(snapshot.data);
+                return GridView.count(
+                  crossAxisCount: 2,
+                  children: _listadogiphys(snapshot.requireData),
+                );
+              } else if (snapshot.hasError) {
+                print(snapshot.error);
+                return Text("Soy error");
+              }
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            },
           )),
     );
+  }
+
+  List<Widget> _listadogiphys(List<Gifgiphy> data) {
+    List<Widget> gifs = [];
+    for (var gif in data) {
+      gifs.add(Card(
+          child: Column(
+        children: [
+          Expanded(
+            child: Image.network(
+              gif.url,
+              fit: BoxFit.fill,
+            ),
+          ),
+          /*    Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(gif.nombre),
+          ),*/
+        ],
+      )));
+    }
+    return gifs;
   }
 }
