@@ -25,11 +25,22 @@ class _FireBaseAPPState extends State<FireBaseAPP> {
               builder: ((context, snapshot) {
                 if (snapshot.hasData) {
                   return ListView.builder(
-                    itemCount: snapshot.data?.length,
-                    itemBuilder: (context, index) {
-                      return Text(snapshot.data?[index]['nombre']);
-                    },
-                  );
+                      itemCount: snapshot.data?.length,
+                      itemBuilder: ((context, index) {
+                        //return Text(snapshot.data?[index]['nombre']);
+                        return ListTile(
+                          title: Text(snapshot.data?[index]['nombre']),
+                          onTap: (() async {
+                            print(Text(snapshot.data?[index]['nombre']));
+                            print(context);
+                            Navigator.pushNamed(context, '/edit',
+                                arguments: {
+                                  "nombre":snapshot.data?[index]['nombre']
+                                });
+                          }),
+                        );
+                        //print("datos");
+                      }));
                 } else {
                   return const Center(
                     child: CircularProgressIndicator(),
@@ -38,10 +49,14 @@ class _FireBaseAPPState extends State<FireBaseAPP> {
               }),
             ),
           ),
-          floatingActionButton: FloatingActionButton(onPressed: () {
-            Navigator.pushNamed(context, '/add');
-          },
-          child: Icon(Icons.add),),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () async {
+              await Navigator.pushNamed(context, '/add');
+              setState(() {});
+              //print("Actualizar");
+            },
+            child: Icon(Icons.add),
+          ),
         ));
   }
 }
