@@ -12,6 +12,9 @@ class _UpdateUserState extends State<UpdateUser> {
   TextEditingController usuariosController = TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
+    final Map argumento = ModalRoute.of(context)!.settings.arguments as Map;
+    //pendiente el pushname y envio de info al update
+    
     return Scaffold(
       appBar: AppBar(
         title: const Text("Update Usuario"),

@@ -20,12 +20,14 @@ class FireBaseMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FirbaseCRUD',
+      title: 'FirebaseCRUD',
       initialRoute: '/',
       routes: {
-        '/':(context) => const FireBaseAPP(),
-        '/add':(context) => const AddUser(),
-        '/edit':(context) =>  UpdateUser(),
+        '/': (context) => const FireBaseAPP(),
+        '/add': (context) => const AddUser(),
+        '/edit': (context)? {
+          const AddUser();
+        },
       },
     );
   }

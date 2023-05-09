@@ -30,13 +30,19 @@ class _FireBaseAPPState extends State<FireBaseAPP> {
                         //return Text(snapshot.data?[index]['nombre']);
                         return ListTile(
                           title: Text(snapshot.data?[index]['nombre']),
-                          onTap: (() async {
+                          /* onTap: (() async {
                             print(Text(snapshot.data?[index]['nombre']));
                             print(context);
                             Navigator.pushNamed(context, '/edit',
-                                arguments: {
+                                arguments:/* {
                                   "nombre":snapshot.data?[index]['nombre']
-                                });
+                                }*/
+                               // ArgumentoEditar()
+                                );
+                          }),*/
+
+                          onTap: (() async{
+                           await Navigator.pushNamed(context, '/add');
                           }),
                         );
                         //print("datos");
