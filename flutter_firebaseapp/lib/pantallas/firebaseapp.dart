@@ -28,22 +28,32 @@ class _FireBaseAPPState extends State<FireBaseAPP> {
                       itemCount: snapshot.data?.length,
                       itemBuilder: ((context, index) {
                         //return Text(snapshot.data?[index]['nombre']);
-                        return ListTile(
-                          title: Text(snapshot.data?[index]['nombre']),
-                          /* onTap: (() async {
-                            print(Text(snapshot.data?[index]['nombre']));
-                            print(context);
-                            Navigator.pushNamed(context, '/edit',
-                                arguments:/* {
-                                  "nombre":snapshot.data?[index]['nombre']
-                                }*/
-                               // ArgumentoEditar()
-                                );
-                          }),*/
-
-                          onTap: (() async{
-                           await Navigator.pushNamed(context, '/add');
-                          }),
+                        return Dismissible(
+                          key:Key(snapshot.data?[index]['uid']),//UniqueKey(),
+                          child: ListTile(
+                            title: Text(snapshot.data?[index]['nombre']),
+                            /* onTap: (() async {
+                              print(Text(snapshot.data?[index]['nombre']));
+                              print(context);
+                              Navigator.pushNamed(context, '/edit',
+                                  arguments:/* {
+                                    "nombre":snapshot.data?[index]['nombre']
+                                  }*/
+                                 // ArgumentoEditar()
+                                  );
+                            }),*/
+                        
+                            onTap: (() async {
+                              await Navigator.pushNamed(context, '/edit',
+                                  arguments: {
+                                    'nombre':snapshot.data?[index]['nombre'],
+                                    'uid':snapshot.data?[index]['uid']
+                                  });
+                                  setState(() {
+                                    
+                                  });
+                            }),
+                          ),
                         );
                         //print("datos");
                       }));
