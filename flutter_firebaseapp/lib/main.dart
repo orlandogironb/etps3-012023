@@ -25,9 +25,7 @@ class FireBaseMain extends StatelessWidget {
       routes: {
         '/': (context) => const FireBaseAPP(),
         '/add': (context) => const AddUser(),
-        '/edit': (context)? {
-          const AddUser();
-        },
+        '/edit': (context)=> const UpdateUser(),
       },
     );
   }
