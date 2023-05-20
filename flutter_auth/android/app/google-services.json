@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "182112958871",
+    "project_id": "authfrb-abfa1",
+    "storage_bucket": "authfrb-abfa1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182112958871:android:dd8faa40edbbe642fbecd2",
+        "android_client_info": {
+          "package_name": "flutterutec.edu.sv.flutter_auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182112958871-bhnof0pebg81k07bgu1dq8d57act29fl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIVYUCjam38x8wXfyP3xRvxKavRfg8YxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182112958871-bhnof0pebg81k07bgu1dq8d57act29fl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

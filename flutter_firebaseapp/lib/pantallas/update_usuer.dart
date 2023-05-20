@@ -20,10 +20,10 @@ class _UpdateUserState extends State<UpdateUser> {
         title: const Text("Update Usuario"),
       ),
       body: Padding(
-        padding: EdgeInsets.all(25.0),
+        padding:const EdgeInsets.all(25.0),
         child: Column(
           children: [
-            Center(
+           const Center(
               child: const Text(
                 'pagina modificar usuario',
                 style: TextStyle(fontSize: 24),
@@ -31,7 +31,7 @@ class _UpdateUserState extends State<UpdateUser> {
             ),
             TextField(
               controller: usuariosController,
-              decoration: InputDecoration(hintText: 'Ingrese la modificacion'),
+              decoration: const InputDecoration(hintText: 'Ingrese la modificacion'),
             ),
             ElevatedButton(
                 onPressed: () async {
@@ -41,7 +41,7 @@ class _UpdateUserState extends State<UpdateUser> {
                   });
                   //   Navigator.pop(context);
                 },
-                child: Text("Actualizar"))
+                child:const Text("Actualizar"))
           ],
         ),
       ),

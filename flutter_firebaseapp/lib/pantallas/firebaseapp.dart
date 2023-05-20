@@ -11,12 +11,13 @@ class FireBaseAPP extends StatefulWidget {
 
 class _FireBaseAPPState extends State<FireBaseAPP> {
   @override
+  //_llave =UniqueKey();
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'CRUD Firebase',
         home: Scaffold(
           appBar: AppBar(
-            title: Text('FIREBASE'),
+            title: const Text('FIREBASE'),
           ),
           body: Padding(
             padding: const EdgeInsets.all(18.0),
@@ -29,7 +30,17 @@ class _FireBaseAPPState extends State<FireBaseAPP> {
                       itemBuilder: ((context, index) {
                         //return Text(snapshot.data?[index]['nombre']);
                         return Dismissible(
-                          key:Key(snapshot.data?[index]['uid']),//UniqueKey(),
+                          confirmDismiss: (direction) async {
+                            print("Confirmacion de borrado");
+                            return true;
+                          },
+                          background: Container(
+                            color: (Colors.red),
+                            child: const Icon(Icons.delete),
+                          ),
+                          direction: DismissDirection.endToStart,
+                          key:  UniqueKey(),
+                          //Key(Text(snapshot.data?[index]['uid']))
                           child: ListTile(
                             title: Text(snapshot.data?[index]['nombre']),
                             /* onTap: (() async {
@@ -42,17 +53,15 @@ class _FireBaseAPPState extends State<FireBaseAPP> {
                                  // ArgumentoEditar()
                                   );
                             }),*/
-                        
-                            onTap: (() async {
+
+                          /*  onTap: (() async {
                               await Navigator.pushNamed(context, '/edit',
                                   arguments: {
-                                    'nombre':snapshot.data?[index]['nombre'],
-                                    'uid':snapshot.data?[index]['uid']
+                                    'nombre': snapshot.data?[index]['nombre'],
+                                    //'uid': snapshot.data?[index]['uid']
                                   });
-                                  setState(() {
-                                    
-                                  });
-                            }),
+                              setState(() {});
+                            }),*/
                           ),
                         );
                         //print("datos");
@@ -71,7 +80,7 @@ class _FireBaseAPPState extends State<FireBaseAPP> {
               setState(() {});
               //print("Actualizar");
             },
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
         ));
   }

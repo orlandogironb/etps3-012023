@@ -17,18 +17,18 @@ class _AddUserState extends State<AddUser> {
         title: const Text("agregar usuario"),
       ),
       body: Padding(
-        padding: EdgeInsets.all(25.0),
+        padding:const EdgeInsets.all(25.0),
         child: Column(
           children: [
-            Center(
-              child: const Text(
+           const Center(
+              child:  Text(
                 'pagina agregar usuario',
                 style: TextStyle(fontSize: 24),
               ),
             ),
             TextField(
               controller: usuariosController,
-              decoration: InputDecoration(hintText: 'Ingrese el usuario'),
+              decoration: const InputDecoration(hintText: 'Ingrese el usuario'),
             ),
             ElevatedButton(
                 onPressed: () async {
@@ -38,7 +38,7 @@ class _AddUserState extends State<AddUser> {
                   });
                   //   Navigator.pop(context);
                 },
-                child: Text("Guardar"))
+                child: const Text("Guardar"))
           ],
         ),
       ),
